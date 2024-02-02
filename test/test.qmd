@@ -1,0 +1,30 @@
+---
+title: "title"
+subtitle: "sub"
+author: "Kangheng Liu"
+date: last-modified
+date-format: long
+format:
+    html:
+        theme:
+            dark: [cosmo, style/html-sta313.scss, style/html-dark.scss]
+            light: [cosmo, style/html-sta313.scss]
+        toc: true
+        code-copy: true
+        code-overflow: wrap
+        mainfont: "Atkinson Hyperlegible"
+        code-annotations: hover
+        self-contained: false
+execute:
+    echo: true
+    warning: false
+    message: false
+    freeze: auto
+filters:
+    - openlinksinnewpage
+    - lightbox
+lightbox: auto
+---
+
+## THE DOC
+        

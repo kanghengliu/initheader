@@ -21,8 +21,9 @@ def copy_folder(src_folder, dest_folder):
 def copy_stylesheet(path):
     # Determine the parent folder of the provided path
     parent_folder = os.path.dirname(path)
-    # Path to the style folder (modify this according to your setup)
-    style_folder = "/Users/kang/Documents/miscProjects/initheader/style"
+    # Path to the style folder
+    curruent_folder = os.path.dirname(os.path.abspath(__file__))
+    style_folder = curruent_folder + "/style"
 
     # Copy style folder to the parent directory
     dest_folder = os.path.join(parent_folder, os.path.basename(style_folder))
@@ -31,14 +32,13 @@ def copy_stylesheet(path):
 def copy_extensions(path):
     # Determine the parent folder of the provided path
     parent_folder = os.path.dirname(path)
-    # Path to the _extension folder (modify this according to your setup)
-    extension_folder = "/Users/kang/Documents/miscProjects/initheader/_extensions"
+    curruent_folder = os.path.dirname(os.path.abspath(__file__))
+    # Path to the _extension folder
+    extension_folder = curruent_folder + "/_extensions"
 
     # Copy _extension folder to the parent directory
     dest_folder = os.path.join(parent_folder, os.path.basename(extension_folder))
     copy_folder(extension_folder, dest_folder)
-
-# ... [rest of the script remains unchanged]
 
 
 def modify_file(path, title, subtitle, self_contained):

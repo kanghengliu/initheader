@@ -1,4 +1,4 @@
-# Helper script for populating Yaml Header in Quarto Documents
+# Helper Script for Populating Yaml Header in Quarto Documents
 
 This is my script for modifying/inserting yaml header in quarto documents. 
 

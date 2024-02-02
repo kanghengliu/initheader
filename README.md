@@ -12,7 +12,9 @@ This is my script for modifying/inserting yaml header in quarto documents.
 
 ## How to use:
 
-1. ```shell
+1. Clone this repo
+   
+   ```shell
    git clone https://github.com/kanghengliu/initheader.git
    ```
 2. browse quarto extensions u want to use, then copy to **`_extensions`** folder

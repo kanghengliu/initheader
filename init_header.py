@@ -7,7 +7,7 @@ from pathlib import Path
 def copy_folder(src_folder, dest_folder):
     # Check if destination folder already exists
     if os.path.exists(dest_folder):
-        proceed = input(f"The folder {dest_folder} already exists. Overwrite? (yes/no(default)): ")
+        proceed = input(f"The folder {dest_folder} already exists. Overwrite? (y/n(default)): ")
         if proceed.lower() not in ['yes', 'y']:
             print(f"Skipping copying {src_folder}")
             return
@@ -88,7 +88,7 @@ lightbox: auto
                 # Existing header found
                 print("Existing header found:")
                 print(first_cell.source)
-                proceed = input("Overwrite? (yes/no(default)): ")
+                proceed = input("Overwrite? (y/n(default)): ")
                 if proceed.lower() == 'yes' or proceed.lower() == 'y':
                     # Replace the existing header
                     notebook.cells[0].source = new_header
@@ -152,7 +152,7 @@ lightbox: auto
                 existing_header = ''.join(lines[:end_of_header_idx + 1])
                 print("Existing header found:")
                 print(existing_header)
-                proceed = input("Overwrite? (yes/no(default)): ")
+                proceed = input("Overwrite? (y/n(default)): ")
                 
                 if proceed.lower() != 'yes' or proceed.lower() == 'y':
                     return
@@ -186,7 +186,7 @@ def process_files_in_directory(directory, title, subtitle, self_contained):
         if file.endswith('.ipynb') or file.endswith('.qmd'):
             file_path = os.path.join(directory, file)
             # Ask for confirmation before processing each file
-            proceed = input(f"Do you want to process the file {file_path}? (yes(default)/no): ")
+            proceed = input(f"Do you want to process the file {file_path}? (y(default)/n): ")
             if proceed.lower() in ['no', 'n']:
                 print(f"Skipping {file_path}")
             elif proceed.lower() in ['yes', 'y', '']:
@@ -202,7 +202,7 @@ def main(title, subtitle, self_contained, path):
         process_files_in_directory(path, title, subtitle, self_contained)
     elif os.path.isfile(path) and (path.endswith('.ipynb') or path.endswith('.qmd')):
         # Ask for confirmation before processing the file
-        proceed = input(f"Do you want to process the file {path}? (yes(default)/no): ")
+        proceed = input(f"Do you want to process the file {path}? (y(default)/n): ")
         if proceed.lower() in ['no', 'n']:
             print(f"Skipping {path}")
         elif proceed.lower() in ['yes', 'y', '']:
